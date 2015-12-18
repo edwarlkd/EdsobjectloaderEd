@@ -72,16 +72,6 @@ void Groundworkoutside::build(const GsArray<GsVec>& pnts) //build the topbot-les
 		Parray.push() = pnts[i] + GsVec(0.0f, 2.0f, 0.0f);
 		Parray.push() = pnts[i + 1];
 	}
-	
-	Parray.push() = pnts[pnts.size()-1];	
-	Parray.push() = pnts[0];
-	Parray.push() = pnts[pnts.size()-1] + GsVec(0.0f, 2.0f, 0.0f);
-
-	////////////////////////////// comes oppsite
-	Parray.push() = pnts[0] + GsVec(0.0f, 2.0f, 0.0f);
-	Parray.push() = pnts[pnts.size() - 1] + GsVec(0.0f, 2.0f, 0.0f);
-	Parray.push() = pnts[0];
-
 
 
 	float genius = Parray.size() / 6;
