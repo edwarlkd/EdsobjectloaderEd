@@ -13,8 +13,8 @@ Groundworkoutside::~Groundworkoutside()
 void Groundworkoutside::init()
 {
 	// Load programs:
-	_vshgou.load_and_compile(GL_VERTEX_SHADER, "../vsh_mcol_gouraud.glsl");
-	_fshgou.load_and_compile(GL_FRAGMENT_SHADER, "../fsh_gouraud.glsl");
+	_vshgou.load_and_compile(GL_VERTEX_SHADER, "../2vsh_mcol_gouraud.glsl");
+	_fshgou.load_and_compile(GL_FRAGMENT_SHADER, "../2fsh_gouraud.glsl");
 	_proggouraud.init_and_link(_vshgou, _fshgou);
 
 	// Define buffers needed:
