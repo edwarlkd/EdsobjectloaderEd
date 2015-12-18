@@ -27,25 +27,61 @@ void Startingline::init()
 
 void Startingline::build() // 
 {
-	Parray.push() = GsVec(-1.0f, 0.1f, -0.2f);
-	Parray.push() = GsVec(1.0f, 0.1f, -0.2f);
-	Parray.push() = GsVec(-1.0f, 0.1f, 0.2f);
-	
-	Parray.push() = GsVec(1.0f, 0.1f, 0.2f);
-	Parray.push() = GsVec(1.0f, 0.1f, -0.2f);
-	Parray.push() = GsVec(-1.0f, 0.1f, 0.2f);
+
+	for (int i = 0; i < 4; i++)
+	{
+		Parray.push() = GsVec(-0.25f, 0.1f, -0.2f);
+		Parray.push() = GsVec(0.25f, 0.1f, -0.2f);
+		Parray.push() = GsVec(-0.25f, 0.1f, 0.2f);
+
+		Parray.push() = GsVec(0.25f, 0.1f, 0.2f);
+		Parray.push() = GsVec(0.25f, 0.1f, -0.2f);
+		Parray.push() = GsVec(-0.25f, 0.1f, 0.2f);
+	}
+
+
 
 	//shifting
 	GsMat result, rotation, translation;
+	//	float rotationangle2 = (6 * pi / 7);
+	translation.e14 = -4.5f; //translation for barbetweenhandle
+	translation.e24 = 0.0f;
+	translation.e34 = 0.0f;
+	result = translation;
+	for (int i = 0; i < 6; i++)
+	{
+		Parray[i] = result*Parray[i];
+	}
+
 	//	float rotationangle2 = (6 * pi / 7);
 	translation.e14 = -4.0f; //translation for barbetweenhandle
 	translation.e24 = 0.0f;
 	translation.e34 = 0.0f;
 	result = translation;
-	for (int i = 0; i < Parray.size(); i++)
+	for (int i = 6; i < 12; i++)
 	{
 		Parray[i] = result*Parray[i];
 	}
+
+	//	float rotationangle2 = (6 * pi / 7);
+	translation.e14 = -3.5f; //translation for barbetweenhandle
+	translation.e24 = 0.0f;
+	translation.e34 = 0.0f;
+	result = translation;
+	for (int i = 12; i < 18; i++)
+	{
+		Parray[i] = result*Parray[i];
+	}
+
+	translation.e14 = -3.0f; //translation for barbetweenhandle
+	translation.e24 = 0.0f;
+	translation.e34 = 0.0f;
+	result = translation;
+	for (int i = 12; i < 18; i++)
+	{
+		Parray[i] = result*Parray[i];
+	}
+	
 
 	/*	coordinates for the starting line:
 	Parray[0] = -5, 0.1, -0.2
@@ -75,7 +111,16 @@ void Startingline::build() //
 		std::cout << "Parray[" << i << "] = " << Parray[i] << "\n";
 	}
 
-	Carray.size(Parray.size()); Carray.setall(GsColor::white);
+	for (int i = 0; i < 4; i++)
+	{
+		Carray.push() = GsColor::white;
+		Carray.push() = GsColor::white;
+		Carray.push() = GsColor::white;
+
+		Carray.push() = GsColor::black;
+		Carray.push() = GsColor::black;
+		Carray.push() = GsColor::black;
+	}
 
 	// send data to OpenGL buffers:
 	glBindVertexArray(va[0]);
