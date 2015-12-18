@@ -20,21 +20,7 @@ void AppWindow::initPrograms ()
  {
    // Init my scene objects:
    _axis.init ();
-
-   //Init Car 1//
    _model.init ();
-   _Tire1.init();
-   _Tire2.init();
-   _Tire3.init();
-   _Tire4.init();
-
-   //Init Car 2//
-   _model_1.init();
-   _Tire1_1.init();
-   _Tire1_2.init();
-   _Tire1_3.init();
-   _Tire1_4.init();
-
 
 
    _racingtrack.init();
@@ -62,94 +48,20 @@ static void printInfo ( GsModel& m )
 
 void AppWindow::loadModel ( int model )
  {
-	 float f;
-	 //Car1//
-	 GsString file;
-	 GsString file2;
-	 GsString file3;
-	 GsString file4;
-	 GsString file5;
-
-	 //Car2//
-	 GsString file1;
-	 GsString file1_2;
-	 GsString file1_3;
-	 GsString file1_4;
-	 GsString file1_5;
-
-	//Load Car1//
-	 f = 0.1f;
-	 file = "../models/Car1/Body.obj"; file2 = "../models/Car1/Tire_1.obj"; file3 = "../models/Car1/Tire_2.obj"; file4 = "../models/Car1/Tire_3.obj"; file5 = "../models/Car1/Tire_4.obj";
-	 file = "../models/Car2/Body2.obj"; file2 = "../models/Car2/Tire2_1.obj"; file3 = "../models/Car2/Tire2_2.obj"; file4 = "../models/Car2/Tire2_3.obj"; file5 = "../models/Car2/Tire2_4.obj";
-
-	 std::cout << "Loading " << file << "...\n";
-	 if (!_gsm.load(file)) std::cout << "Error!\n";
-	 printInfo(_gsm);
-	 _gsm.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file2 << "...\n";
-	 if (!_gsm2.load(file2)) std::cout << "Error!\n";
-	 printInfo(_gsm2);
-	 _gsm2.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file3 << "...\n";
-	 if (!_gsm3.load(file3)) std::cout << "Error!\n";
-	 printInfo(_gsm3);
-	 _gsm3.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file4 << "...\n";
-	 if (!_gsm4.load(file4)) std::cout << "Error!\n";
-	 printInfo(_gsm4);
-	 _gsm4.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file5 << "...\n";
-	 if (!_gsm5.load(file5)) std::cout << "Error!\n";
-	 printInfo(_gsm5);
-	 _gsm5.scale(f); // to fit our camera space
-	 /////////////////////////////////////////////////////////////
-	 //Load Car 2//
-	 std::cout << "Loading " << file1 << "...\n";
-	 if (!_gsm1.load(file1)) std::cout << "Error!\n";
-	 printInfo(_gsm1);
-	 _gsm1.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file1_2 << "...\n";
-	 if (!_gsm1_2.load(file1_2)) std::cout << "Error!\n";
-	 printInfo(_gsm1_2);
-	 _gsm1_2.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file1_3 << "...\n";
-	 if (!_gsm1_3.load(file1_3)) std::cout << "Error!\n";
-	 printInfo(_gsm1_3);
-	 _gsm1_3.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file1_4 << "...\n";
-	 if (!_gsm1_4.load(file1_4)) std::cout << "Error!\n";
-	 printInfo(_gsm1_4);
-	 _gsm1_4.scale(f); // to fit our camera space
-
-	 std::cout << "Loading " << file1_5 << "...\n";
-	 if (!_gsm1_5.load(file1_5)) std::cout << "Error!\n";
-	 printInfo(_gsm1_5);
-	 _gsm1_5.scale(f); // to fit our camera space
-
-
-	 //Build Car1//
-	 _model.build(_gsm);
-	 _Tire1.build(_gsm2);
-	 _Tire2.build(_gsm3);
-	 _Tire3.build(_gsm4);
-	 _Tire4.build(_gsm5);
-
-	 //Build Car2//
-	 _model_1.build(_gsm1);
-	 _Tire1_1.build(_gsm1_2);
-	 _Tire1_2.build(_gsm1_3);
-	 _Tire1_3.build(_gsm1_4);
-	 _Tire1_4.build(_gsm1_5);
-
-	 redraw();
-
+   float f;
+   GsString file;
+   switch ( model )
+    { case 1: f=0.01f; file="../models/porsche.obj"; break;
+      case 2: f=0.20f; file="../models/al.obj"; break;
+      case 3: f=0.10f; file="../models/f-16.obj"; break;
+      default: return;
+    }
+   std::cout<<"Loading "<<file<<"...\n";
+   if ( !_gsm.load ( file ) ) std::cout<<"Error!\n";
+   printInfo ( _gsm );
+   _gsm.scale ( f ); // to fit our camera space
+   _model.build(_gsm);
+   redraw();
  }
 
 // mouse events are in window coordinates, but your 2D scene is in [0,1]x[0,1],
@@ -285,21 +197,12 @@ void AppWindow::glutDisplay ()
 
    // Draw:
    if ( _viewaxis ) _axis.draw ( stransf, sproj );
-   
+   _model.draw ( stransf, sproj, _light );
 
    _racingtrack.draw(stransf, sproj);
    _groundworkoutside.draw(stransf, sproj, _light);
    _groundwork.draw(stransf, sproj);
    _startingline.draw(stransf, sproj, _light);
-
-   //Car1//
-   _model.draw(stransf, sproj, _light);
-   _Tire1.draw(stransf, sproj, _light);
-   _Tire2.draw(stransf, sproj, _light);
-   _Tire3.draw(stransf, sproj, _light);
-   _Tire4.draw(stransf, sproj, _light);
-
-   //Car2//
 
    // Swap buffers and draw:
    glFlush();         // flush the pipeline (usually not necessary)
