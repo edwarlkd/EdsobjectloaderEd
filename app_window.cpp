@@ -300,11 +300,6 @@ void AppWindow::glutDisplay ()
    _Tire4.draw(stransf, sproj, _light);
 
    //Car2//
-   _model_1.draw(stransf, sproj, _light);
-   _Tire1_1.draw(stransf, sproj, _light);
-   _Tire1_2.draw(stransf, sproj, _light);
-   _Tire1_3.draw(stransf, sproj, _light);
-   _Tire1_4.draw(stransf, sproj, _light);
 
    // Swap buffers and draw:
    glFlush();         // flush the pipeline (usually not necessary)
