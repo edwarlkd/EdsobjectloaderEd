@@ -1,21 +1,17 @@
-﻿Build started 12/17/2015 8:24:34 PM.
-     1>Project "C:\Users\Edward\Desktop\잡초\Merced\CSE170\Proj2\glutapp3dObjLoader\visualc14\glutapp3d.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/17/2015 11:31:42 PM.
+     1>Project "C:\Users\Andrew\Documents\GitHub\EdsobjectloaderEd\visualc14\glutapp3d.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I../ /I../freeglut /I../glew /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"obj\objloader_Debug\\" /Fd"obj\objloader_Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ..\app_main.cpp ..\app_window.cpp ..\startingline.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I../ /I../freeglut /I../glew /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"obj\objloader_Debug\\" /Fd"obj\objloader_Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ..\app_main.cpp ..\app_window.cpp
          app_main.cpp
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\racingtrack.h(18): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\groundwork.h(17): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\groundworkoutside.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\startingline.h(21): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\racingtrack.h(18): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\groundwork.h(17): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\groundworkoutside.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\startingline.h(21): warning C4305: 'initializing': truncation from 'double' to 'const float'
          app_window.cpp
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\racingtrack.h(18): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\groundwork.h(17): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\groundworkoutside.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\startingline.h(21): warning C4305: 'initializing': truncation from 'double' to 'const float'
-         startingline.cpp
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\startingline.h(21): warning C4305: 'initializing': truncation from 'double' to 'const float'
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\startingline.cpp(60): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\edward\desktop\잡초\merced\cse170\proj2\glutapp3dobjloader\startingline.cpp(63): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\andrew\documents\github\edsobjectloadered\racingtrack.h(18): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\groundwork.h(17): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\groundworkoutside.h(23): warning C4305: 'initializing': truncation from 'double' to 'const float'
+     1>c:\users\andrew\documents\github\edsobjectloadered\startingline.h(21): warning C4305: 'initializing': truncation from 'double' to 'const float'
          Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"obj\objloader_Debug\objloader.exe" /NOLOGO ../freeglut/freeglut.lib ../glew/glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"obj\objloader_Debug\objloader.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"obj\objloader_Debug\objloader.lib" /MACHINE:X86 /SAFESEH obj\objloader_Debug\app_main.obj
@@ -45,9 +41,9 @@
          obj\objloader_Debug\so_model.obj
          obj\objloader_Debug\so_myobject.obj
          obj\objloader_Debug\startingline.obj
-         glutapp3d.vcxproj -> C:\Users\Edward\Desktop\잡초\Merced\CSE170\Proj2\glutapp3dObjLoader\visualc14\obj\objloader_Debug\objloader.exe
-     1>Done Building Project "C:\Users\Edward\Desktop\잡초\Merced\CSE170\Proj2\glutapp3dObjLoader\visualc14\glutapp3d.vcxproj" (Build target(s)).
+         glutapp3d.vcxproj -> C:\Users\Andrew\Documents\GitHub\EdsobjectloaderEd\visualc14\obj\objloader_Debug\objloader.exe
+     1>Done Building Project "C:\Users\Andrew\Documents\GitHub\EdsobjectloaderEd\visualc14\glutapp3d.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.54
+Time Elapsed 00:00:09.27

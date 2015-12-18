@@ -29,7 +29,22 @@ class AppWindow : public GlutWindow
 
     // My scene objects:
     SoAxis _axis;
-    SoModel _model;
+
+	//Car Model 1//
+	SoModel _model;
+	SoModel _Tire1;
+	SoModel _Tire2;
+	SoModel _Tire3;
+	SoModel _Tire4;
+	///////////////
+
+	//Car Model 2//
+	SoModel _model_1;
+	SoModel _Tire1_1;
+	SoModel _Tire1_2;
+	SoModel _Tire1_3;
+	SoModel _Tire1_4;
+	///////////////
 
 	Racingtrack _racingtrack;
 	Groundwork _groundwork;
@@ -40,7 +55,22 @@ class AppWindow : public GlutWindow
 
     // Scene data:
     bool  _viewaxis;
+	//Car Model 1//
     GsModel _gsm;
+	GsModel _gsm2;
+	GsModel _gsm3;
+	GsModel _gsm4;
+	GsModel _gsm5;
+	///////////////
+
+	//Car Model 1//
+	GsModel _gsm1;
+	GsModel _gsm1_2;
+	GsModel _gsm1_3;
+	GsModel _gsm1_4;
+	GsModel _gsm1_5;
+	///////////////
+
     GsLight _light;
     
     // App data:
